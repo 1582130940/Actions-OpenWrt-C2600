@@ -9,3 +9,7 @@ sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\
 
 # Set LuCI Default Theme to Material
 sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci/Makefile
+
+# Allow QUIC Again (By LGA1150)
+sed -i 's/	$ipt -A SS_SPEC_TPROXY -p udp --dport 443 -j RETURN//g' feeds/helloworld/luci-app-ssr-plus/root/usr/bin/ssr-rules
+sed -i 's/	$ipt -A SS_SPEC_TPROXY -p udp --dport 80 -j RETURN//g' feeds/helloworld/luci-app-ssr-plus/root/usr/bin/ssr-rules
