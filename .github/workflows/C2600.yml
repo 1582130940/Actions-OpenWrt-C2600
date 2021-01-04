@@ -24,7 +24,7 @@ on:
 
 env:
   REPO_URL: https://github.com/1582130940/lean-openwrt
-  REPO_BRANCH: rebase
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: C2600.config
   DIY_P1_SH: C2600-1.sh
